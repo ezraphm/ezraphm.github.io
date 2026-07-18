@@ -65,6 +65,48 @@
     .output { margin-bottom: 1.5rem; }
     .output .line { color: var(--muted); font-size: 0.8rem; font-family: 'JetBrains Mono', monospace; }
 
+    /* featured */
+    .featured-label { color: var(--orange); font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; margin-bottom: 0.4rem; }
+    .featured {
+      display: flex; flex-direction: column; gap: 0.2rem;
+      padding: 0.6rem 0.75rem;
+      background: rgba(255,174,87,0.04);
+      border: 1px solid rgba(255,174,87,0.15);
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+    .feat-link {
+      display: flex; align-items: center; gap: 0.5rem;
+      padding: 0.3rem 0;
+      text-decoration: none;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.78rem;
+      transition: opacity 0.15s;
+    }
+    .feat-link:hover { opacity: 0.8; }
+    .feat-icon { flex-shrink: 0; font-size: 0.9rem; }
+    .feat-name { color: var(--text); }
+    .feat-arrow { color: var(--muted); margin-left: auto; }
+    .feat-link:hover .feat-arrow { color: var(--orange); }
+
+    /* CTA button */
+    .cta-btn {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      margin-top: 0.3rem; padding: 0.4rem 0.75rem;
+      background: rgba(255,174,87,0.1);
+      border: 1px solid var(--accent);
+      border-radius: 6px;
+      text-decoration: none;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.78rem;
+      color: var(--accent);
+      animation: ctaPulse 2s ease-in-out infinite;
+      transition: background 0.15s;
+      align-self: flex-start;
+    }
+    .cta-btn:hover { background: rgba(255,174,87,0.2); animation: none; }
+    @keyframes ctaPulse { 0%,100% { box-shadow: 0 0 0 0 rgba(255,174,87,0.3); } 50% { box-shadow: 0 0 0 4px rgba(255,174,87,0); } }
+
     /* links as terminal listing */
     .links { display: flex; flex-direction: column; gap: 0.15rem; }
     .link-line {
@@ -131,6 +173,22 @@
     <div class="line"><span style="color:var(--blue)">os</span>: <span style="color:var(--orange)">AgenticOS / AnankeOS</span></div>
     <div class="line"><span style="color:var(--blue)">role</span>: <span style="color:var(--orange)">Builder · Trader · Automator</span></div>
     <div class="line"><span style="color:var(--blue)">uptime</span>: <span style="color:var(--green)">online  ◉</span></div>
+  </div>
+
+  <!-- featured -->
+  <div class="featured-label">✦ featured</div>
+  <div class="featured">
+    <a class="feat-link" href="https://dev.to/ezraphm">
+      <span class="feat-icon">🔥</span>
+      <span class="feat-name">Latest: "Building AI Agents with Cloudflare Workers"</span>
+      <span class="feat-arrow">→</span>
+    </a>
+    <a class="feat-link" href="https://github.com/ezraphm/AnankeOS">
+      <span class="feat-icon">📺</span>
+      <span class="feat-name">AnankeOS v2 — Agentic OS Demo</span>
+      <span class="feat-arrow">→</span>
+    </a>
+    <a class="cta-btn" href="https://ezraphm.pages.dev/">⚡ Join the waitlist →</a>
   </div>
 
   <!-- ls command -->
