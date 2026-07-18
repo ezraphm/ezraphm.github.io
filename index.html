@@ -49,9 +49,9 @@
     .avatar-row { display: flex; align-items: center; gap: 1rem; margin-bottom: 0.5rem; }
     .avatar {
       width: 48px; height: 48px; border-radius: 50%;
-      background: var(--surface); border: 1px solid var(--border);
-      display: flex; align-items: center; justify-content: center;
-      font-size: 1.5rem; flex-shrink: 0;
+      border: 1px solid var(--border);
+      object-fit: cover;
+      flex-shrink: 0;
     }
     .name { font-size: 1.35rem; font-weight: 600; color: var(--blue); font-family: 'JetBrains Mono', monospace; }
     .tagline-wrap { height: 1.5rem; margin-top: 0.4rem; }
@@ -114,7 +114,7 @@
     <div class="host"><span>┌──(<span style="color:var(--green)">ezraphm</span>@<span style="color:var(--blue)">bio.link</span>)<span style="color:var(--red)">-</span>[<span style="color:var(--orange)">~</span>]</span><span class="clock" id="clock"></span></div>
     <div class="host">└─ $</div>
     <div class="avatar-row" style="margin-top:0.75rem">
-      <div class="avatar">⚡</div>
+      <img class="avatar" src="avatar.png" alt="Ezra Pham">
       <div>
         <div class="name">Ezra Pham</div>
         <div class="tagline-wrap">
